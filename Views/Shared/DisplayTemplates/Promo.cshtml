@@ -1,0 +1,26 @@
+@using mecp_kontent_core.Helpers.Extensions
+@model Promo
+
+@{
+    Layout = null;
+}
+
+<section class="padding-top-sm padding-bottom-sm" style="background-size: cover; background: url((@Model.BackgroundImage.FirstOrDefault() != null) ? 'True' : 'False')">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-offset-3 col-lg-9">
+          <h2>
+            <p>@Model.Title</p>
+          </h2>
+        </div>
+      </div>
+      <div class="row padding-vertical-lg">
+        <div class="col-lg-offset-3 col-lg-9">@Html.DisplayFor(Model => Model.Description)</div>
+      </div>
+      <div v-if="showLearnMoreLink" class="row">
+        <div class="col-sm-offset-6 col-sm-6 col-md-offset-8 col-md-4">
+          
+        </div>
+      </div>
+    </div>
+  </section>
