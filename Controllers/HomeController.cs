@@ -1,5 +1,4 @@
 ﻿using System.Threading.Tasks;
-
 using mecp_kontent_core.Models;
 using Kentico.Kontent.Delivery;
 using Kentico.Kontent.Delivery.Abstractions;
@@ -18,7 +17,7 @@ namespace mecp_kontent_core.Controllers
         public async Task<ViewResult> Index()
         {
             IDeliveryClient client = DeliveryClientBuilder
-                .WithProjectId("2f957d12-d69d-00a1-bdf9-fb08ef04dfa5")
+                .WithProjectId("<ProjectID>")
                 .Build();
 
             var response = await client.GetItemAsync<Homepage>(
